@@ -1,0 +1,267 @@
+:root {
+  /* Colores Base */
+  --bg-base: rgb(49, 62, 74);
+  --fg-base: rgb(240, 240, 240);
+
+  /* Menú & Estructura */
+  --menu-bg: color-mix(in srgb, var(--bg-base) 90%, black);
+  --menu-fg: var(--fg-base);
+  --menu-line-color: color-mix(in srgb, var(--menu-bg) 90%, white);
+  --menu-arrow-color: color-mix(in srgb, var(--menu-bg) 60%, white);
+  --menu-title-fg: color-mix(in srgb, var(--menu-fg) 60%, black);
+  --menu-btn-bg: color-mix(in srgb, var(--bg-base) 95%, white);
+
+  /* Scrollbar */
+  --scrollbar-bg: var(--menu-bg);
+  --scrollbar-thumb: color-mix(in srgb, var(--menu-bg) 90%, white);
+
+  /* Paneles */
+  --login-bg: color-mix(in srgb, var(--bg-base) 95%, white);
+
+  /* Toast & Validación */
+  --toast-success: #1b5e20;
+  --toast-info: #01579b;
+  --toast-warning: #e65100;
+  --toast-error: #c62828;
+
+  /* Accent Colors */
+  --accent-default: #4B6EAF;
+  --accent-blue: #0A84FF;
+  --accent-purple: #BF5AF2;
+  --accent-red: #FF453A;
+  --accent-orange: #FF9F0A;
+  --accent-yellow: #FFCC00;
+  --accent-green: #32D74B;
+}
+
+/* Reset y estilos generales */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Scrollbar personalizada con tus variables */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 4px;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--bg-base);
+  color: var(--fg-base);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+/* Contenedor principal de dos columnas */
+.auth-wrapper {
+  background-color: var(--login-bg);
+  border-radius: 12px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+  display: flex;
+  width: 100%;
+  max-width: 900px;
+  overflow: hidden;
+  border: 1px solid var(--menu-line-color);
+}
+
+/* Tarjetas individuales */
+.auth-card {
+  flex: 1;
+  padding: 40px;
+}
+
+.register-card {
+  background-color: var(--login-bg);
+}
+
+.login-card {
+  background-color: color-mix(in srgb, var(--login-bg) 92%, black);
+}
+
+/* Divisor vertical */
+.auth-divider {
+  width: 1px;
+  background-color: var(--menu-line-color);
+}
+
+/* Encabezados */
+.card-header {
+  margin-bottom: 24px;
+}
+
+.card-header h2 {
+  font-size: 24px;
+  color: var(--fg-base);
+  margin-bottom: 6px;
+}
+
+.card-header p {
+  color: var(--menu-arrow-color);
+  font-size: 14px;
+}
+
+/* Campos de formulario */
+.form-group {
+  margin-bottom: 18px;
+}
+
+label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--fg-base);
+  margin-bottom: 6px;
+}
+
+input {
+  width: 100%;
+  padding: 11px 13px;
+  background-color: var(--menu-bg);
+  color: var(--fg-base);
+  border: 1px solid var(--menu-line-color);
+  border-radius: 6px;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+/* Placeholder */
+input::placeholder {
+  color: var(--menu-title-fg);
+}
+
+/* Enfoque (Focus) con el Accent Color Default */
+input:focus {
+  border-color: var(--accent-default);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent-default) 30%, transparent);
+}
+
+/* Estilos de error usando Toast.error */
+input.error {
+  border-color: var(--toast-error);
+  background-color: color-mix(in srgb, var(--toast-error) 15%, var(--menu-bg));
+}
+
+.error-msg {
+  display: none;
+  font-size: 12px;
+  color: color-mix(in srgb, var(--toast-error) 40%, white);
+  margin-top: 5px;
+}
+
+.error-msg.visible {
+  display: block;
+}
+
+/* Botones */
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: opacity 0.2s, transform 0.1s;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* Botón principal de registro usando Accent Default */
+.btn-primary {
+  background-color: var(--accent-default);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+/* Botón de login usando Menu Button */
+.btn-secondary {
+  background-color: var(--menu-btn-bg);
+  color: var(--fg-base);
+  border: 1px solid var(--menu-line-color);
+}
+
+.btn-secondary:hover {
+  background-color: color-mix(in srgb, var(--menu-btn-bg) 85%, white);
+}
+
+/* Diseño adaptativo para dispositivos móviles */
+@media (max-width: 768px) {
+  .auth-wrapper {
+    flex-direction: column;
+  }
+
+  .auth-divider {
+    width: 100%;
+    height: 1px;
+  }
+
+  .auth-card {
+    padding: 30px 20px;
+  }
+}
+
+/* super easter egg */
+
+/* Efecto interactivo al pasar el cursor sobre la frase */
+.clickable-quote {
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.2s ease;
+}
+
+.clickable-quote:hover {
+  color: var(--accent-default);
+  text-decoration: underline;
+}
+
+/* Ocultar la imagen por defecto */
+.hidden-image-box {
+  display: none;
+  margin-top: 14px;
+  text-align: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Clase que la hace visible al dar click */
+.hidden-image-box.visible {
+  display: block;
+}
+
+.hidden-image-box img {
+  max-width: 100%;
+  max-height: 180px;
+  border-radius: 8px;
+  border: 1px solid var(--menu-line-color);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+}
+
+/* Animación suave de aparición */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
