@@ -427,25 +427,25 @@ A continuación se muestran evidencias del funcionamiento de la librería.
 
 ## Consola de JavaScript
 
-![Pruebas en consola](../img/Screenshot%202026-09-25%20205605.png)
+![Pruebas en consola](img/Screenshot%202026-09-25%20205605.png)
 
 En esta captura se muestran los resultados obtenidos al ejecutar las funciones de la librería.
 
 ## Formulario de registro
 
-![Formulario de registro](../img/Screenshot%202026-09-25%20204549.png)
+![Formulario de registro](img/Screenshot%202026-09-25%20204549.png)
 
 Se muestra el formulario utilizando las funciones de validación.
 
 ## Ventana modal
 
-![Ventana modal](../img/Screenshot%202026-09-25%20205220.png)
+![Ventana modal](img/Screenshot%202026-09-25%20205220.png)
 
 Se muestra la edad calculada mediante la función `calcularEdad()`.
 
 ## Login
 
-![Login](../img/Screenshot%202026-09-25%20204549.png)
+![Login](img/Screenshot%202026-09-25%20204549.png)
 
 Se muestra el formulario de inicio de sesión utilizando `validarCorreo()` y `validarPassword()`. 
 Las verciones se puede acceder desde la mism parte. Se entiende que se decea redirigir al usuario a 
@@ -457,8 +457,8 @@ otra pagina, pero no hubiera sido divertido.
 
 El proyecto se encuentra publicado mediante GitHub Pages.
 
-**Repositorio:** [Agregar aquí el enlace al repositorio]
+**Repositorio:** [https://github.com/HealedTick04/libreria-utilidades]
 
-**GitHub Pages:** [Agregar aquí el enlace de la página publicada]
+**GitHub Pages:** [https://healedtick04.github.io/libreria-utilidades/]
 
 La página publicada permite probar directamente el formulario, las validaciones, la ventana modal y el inicio de sesión.
