@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso y Registro</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <main class="auth-wrapper">
+
+        <!-- SECCIÓN IZQUIERDA: REGISTRO -->
+        <section class="auth-card register-card">
+
+            <header class="card-header">
+                <h2>Sign Up</h2>
+
+                <p id="easterEggTrigger" class="clickable-quote">
+                    The Man Who Sold The World
+                </p>
+
+                <div id="secretImageContainer" class="hidden-image-box">
+                    <img src="img/ora.jpg" alt="The Man Who Sold The World">
+                </div>
+            </header>
+
+            <form id="registerForm" novalidate>
+
+                <div class="form-group">
+                    <label for="reg-name">Name & Last Name:</label>
+                    <input type="text" id="reg-name" placeholder="Example: Karime Torres">
+                    <span class="error-msg" id="reg-name-error">
+                        Solo se permiten letras y espacios.
+                    </span>
+                </div>
+
+                <div class="form-group">
+                    <label for="reg-email">E-mail:</label>
+                    <input type="email" id="reg-email" placeholder="usuario@correo.com">
+                    <span class="error-msg" id="reg-email-error">
+                        Ingresa un correo electrónico válido.
+                    </span>
+                </div>
+
+                <div class="form-group">
+                    <label for="reg-dob">Date of Birth:</label>
+                    <input type="date" id="reg-dob">
+                    <span class="error-msg" id="reg-dob-error">
+                        Debes tener al menos 18 años.
+                    </span>
+                </div>
+
+                <div class="form-group">
+                    <label for="reg-password">Password:</label>
+                    <input type="password" id="reg-password"
+                        placeholder="Mín. 8 caracteres, mayús, núm y símbolo">
+
+                    <span class="error-msg" id="reg-password-error">
+                        Requiere mín. 8 caracteres, 1 mayúscula, 1 número y 1 símbolo.
+                    </span>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    Sign Up
+                </button>
+
+            </form>
+        </section>
+
+        <!-- DIVISOR VISUAL -->
+        <div class="auth-divider"></div>
+
+        <!-- SECCIÓN DERECHA: LOGIN -->
+        <section class="auth-card login-card">
+
+            <header class="card-header">
+                <h2>Sign In</h2>
+                <p>I Have No Mouth, and I Must Scream</p>
+            </header>
+
+            <form id="loginForm" novalidate>
+
+                <div class="form-group">
+                    <label for="login-email">E-mail:</label>
+                    <input type="email" id="login-email"
+                        placeholder="usuario@correo.com">
+
+                    <span class="error-msg" id="login-email-error">
+                        Ingresa un correo electrónico válido.
+                    </span>
+                </div>
+
+                <div class="form-group">
+                    <label for="login-password">Password:</label>
+                    <input type="password" id="login-password"
+                        placeholder="Tu contraseña">
+
+                    <span class="error-msg" id="login-password-error">
+                        La contraseña no puede estar vacía.
+                    </span>
+                </div>
+
+                <button type="submit" class="btn btn-secondary">
+                    Sign In
+                </button>
+
+            </form>
+        </section>
+
+    </main>
+
+    <script src="js/validator.js"></script>
+
+</body>
+</html>
